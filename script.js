@@ -1,5 +1,5 @@
 /* JavaScript code here */
-console.log('External Javascript');
+//console.log('External Javascript');
 
 function summation(arr){
     sum = 0;
@@ -9,14 +9,14 @@ function summation(arr){
     return sum;
 }
 
-console.log(summation([1,2,3,4,5]))
+//console.log(summation([1,2,3,4,5]))
 
 function validEmail(email){
     
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
 }
 
-console.log(validEmail("mirsahib24@gmail.com"))
+//console.log(validEmail("mirsahib24@gmail.com"))
 
 //object 
 var company = {
@@ -27,12 +27,12 @@ var company = {
     last_name: 'Pichai'
     }
 };
-console.log(company);
+//console.log(company);
 company.updateAge = function(newAge){
     this.age = newAge;
 }
 company.updateAge(25);
-console.log(company);
+//console.log(company);
 
 //task 4
 var library = [ 
@@ -56,7 +56,7 @@ function readingStat(index){
     return library[index].readingStatus;
 }
 
-console.log("Reading status is "+readingStat(2));
+//console.log("Reading status is "+readingStat(2));
 
 
 
@@ -102,12 +102,17 @@ function sortCart(prop){
     })
 }
 sortCart('name');
-console.log(cart);
+//console.log(cart);
+
 function findByName(){
 
 }
-function totalCost(){
 
+
+function totalCost(){
+    const cost = cart.reduce((total,cartPrice)=>total+(cartPrice.price),0);
+    console.log(cost);
 }
+totalCost()
 
  
